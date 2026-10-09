@@ -71,6 +71,19 @@ main { max-width: 880px; margin: 0 auto; padding: 0 1.5rem; }
 
 /* Hero */
 .hero { padding: 6rem 0 4rem; }
+.hero-inner {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.hero-text { flex: 1; min-width: 0; }
+.hero-photo { flex: 0 0 300px; }
+.hero-photo img {
+  width: 100%;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  display: block;
+}
 .kicker {
   color: var(--accent);
   font-size: 0.85rem;
@@ -170,7 +183,9 @@ footer {
 }
 footer p { color: var(--muted); font-size: 0.85rem; }
 
-@media (max-width: 560px) {
+@media (max-width: 760px) {
+  .hero-inner { flex-direction: column-reverse; gap: 2rem; }
+  .hero-photo { flex: none; width: 220px; }
   .nav { padding: 0.9rem 1.1rem; }
   .nav nav { gap: 1.1rem; }
   .hero { padding: 4rem 0 3rem; }
