@@ -127,6 +127,37 @@ main { max-width: 880px; margin: 0 auto; padding: 0 1.5rem; }
 .card h3 { font-size: 1.05rem; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
 .card p { font-size: 0.95rem; margin: 0; }
 
+/* Timeline */
+.timeline { display: flex; flex-direction: column; gap: 0; margin-top: 0.5rem; }
+.role {
+  position: relative;
+  padding: 0 0 2rem 1.75rem;
+  border-left: 2px solid var(--border);
+}
+.role:last-child { padding-bottom: 0.25rem; }
+.role::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+}
+.role .period {
+  color: var(--accent);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+.role h3 { font-size: 1.15rem; letter-spacing: -0.01em; margin-bottom: 0.15rem; }
+.role .company { color: var(--text); font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; }
+.role p:last-child { margin-bottom: 0; }
+
 /* Contact */
 #contact .lede { margin-bottom: 1.75rem; }
 
